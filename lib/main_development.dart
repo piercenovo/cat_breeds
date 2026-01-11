@@ -1,6 +1,3 @@
-import 'package:cat_breeds/app/app.dart';
-import 'package:cat_breeds/bootstrap.dart';
+import 'package:cat_breeds/lib.dart';
 
-Future<void> main() async {
-  await bootstrap(() => const App());
-}
+void main() => bootstrap(Environment.dev);

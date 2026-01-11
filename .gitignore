@@ -5,11 +5,9 @@
 *.swp
 .DS_Store
 .atom/
-.build/
 .buildlog/
 .history
 .svn/
-.swiftpm/
 migrate_working_dir/
 
 # IntelliJ related
@@ -22,7 +20,6 @@ migrate_working_dir/
 .classpath
 .project
 .settings/
-.vscode/*
 
 # packages file containing multi-root paths
 .packages.generated
@@ -107,11 +104,14 @@ app.*.map.json
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 !/dev/ci/**/Gemfile.lock
-!.vscode/extensions.json
-!.vscode/launch.json
 !.idea/codeStyles/
 !.idea/dictionaries/
 !.idea/runConfigurations/
 
-# Generated l10n files
-lib/l10n/gen/
+.vscode/launch.json
+
+*.g.dart
+*.freezed.dart
+
+i18n_generated/
+lib/i18n/

@@ -1,0 +1,24 @@
+name: cat_breeds_api
+description: Core Breeds Api Client
+version: 0.1.0+1
+publish_to: none
+
+environment:
+  sdk: ^3.9.0
+  flutter: ^3.35.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  dio: ^5.9.0
+  cat_breeds_core:
+    path: ../cat_breeds_core
+  freezed_annotation: ^3.1.0
+
+dev_dependencies:
+  build_runner: ^2.10.4
+  flutter_test:
+    sdk: flutter
+  freezed: ^3.2.4
+  json_serializable: ^6.11.3
+  very_good_analysis: ^10.0.0
