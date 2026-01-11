@@ -42,3 +42,9 @@ dev_dependencies:
 flutter:
   generate: true
   uses-material-design: true
+
+flutter_native_splash:
+  color: "#665687"
+  color_dark: "#665687"
+  android: true
+  ios: true
