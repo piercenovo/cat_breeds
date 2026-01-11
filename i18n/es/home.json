@@ -1,3 +1,8 @@
 {
-    "welcome": "Welcome"
+    "title": "Cat Breeds",
+    "search": "Buscando razas...",
+    "notFound": "No se encontraron razas",
+    "description": "Descripción",
+    "years": "{{value}} años",
+    "unknown": "Desconocido"
 }

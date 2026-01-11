@@ -19,7 +19,18 @@ mixin RouterMixin on State<CatBreeds> {
         GoRoute(
           path: Routes.catBreeds.path,
           name: Routes.catBreeds.name,
-          builder: (_, _) => const CatBreedsScreen(),
+          builder: (_, _) => const CatBreedsListScreen(),
+        ),
+        GoRoute(
+          path: Routes.catBreedDetail.path,
+          name: Routes.catBreedDetail.name,
+          builder: (_, state) {
+            final breed = state.extra! as CatBreed;
+
+            return CatBreedDetailScreen(
+              breed: breed,
+            );
+          },
         ),
       ],
     );

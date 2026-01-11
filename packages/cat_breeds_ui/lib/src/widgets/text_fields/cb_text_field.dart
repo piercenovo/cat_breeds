@@ -24,7 +24,7 @@ class CBTextField extends StatefulWidget {
     this.autovalidateMode,
     this.borderSide = const BorderSide(color: Palette.neutral400, width: 1.2),
     this.textAlign = TextAlign.start,
-    this.verticalPadding = 12,
+    this.verticalPadding = 8,
     this.textStyle,
     this.obscureText = false,
     this.hasError = false,
@@ -63,7 +63,7 @@ class CBTextField extends StatefulWidget {
     this.autovalidateMode,
     this.borderSide = const BorderSide(color: Palette.neutral400, width: 1.2),
     this.textAlign = TextAlign.start,
-    this.verticalPadding = 12,
+    this.verticalPadding = 8,
     this.textStyle,
     this.hasError = false,
     this.readOnly = false,
@@ -155,7 +155,7 @@ class _CBTextFieldState extends State<CBTextField> {
 
     return ValueListenableBuilder(
       valueListenable: obscureText,
-      builder: (_, value, __) => TextFormField(
+      builder: (_, value, _) => TextFormField(
         onTap: widget.onTap,
         autofocus: widget.autofocus,
         autocorrect: widget.autocorrect,
@@ -183,7 +183,7 @@ class _CBTextFieldState extends State<CBTextField> {
                   width: 30,
                   icon: prefixIcon,
                   fontWeight: AppFontWeight.regular,
-                  color: context.theme.iconTheme.color,
+                  color: Palette.brandPrimary,
                 ),
           fillColor: widget.enable
               ? Palette.white
@@ -192,18 +192,18 @@ class _CBTextFieldState extends State<CBTextField> {
           enabledBorder: _inputBorder(borderSide: widget.borderSide),
           focusedBorder: _inputBorder(color: Palette.primary),
           errorStyle: context.textTheme.bodySmall?.copyWith(
-            color: Palette.error,
+            color: Palette.red,
             height: 0.4,
           ),
-          errorBorder: _inputBorder(color: Palette.error),
+          errorBorder: _inputBorder(color: Palette.red),
           labelText: widget.labelText,
           labelStyle: context.textTheme.bodyLarge,
-          focusedErrorBorder: _inputBorder(color: Palette.error),
+          focusedErrorBorder: _inputBorder(color: Palette.red),
           suffixIcon: suffixIcon,
         ),
         textAlign: widget.textAlign,
         minLines: widget.lines ?? widget.minLines,
-        maxLines: widget.obscureText ? 1 : widget.lines ?? widget.maxLines,
+        maxLines: !widget.obscureText ? 1 : widget.lines ?? widget.maxLines,
         inputFormatters: [
           ...widget.formatters,
           LengthLimitingTextInputFormatter(widget.maxLength),

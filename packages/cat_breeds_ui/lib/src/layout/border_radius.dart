@@ -14,5 +14,7 @@ const borderRadius15 = BorderRadius.all(Radius.circular(15));
 const borderRadiusVT15 = BorderRadius.vertical(top: Radius.circular(15));
 const borderRadius20 = BorderRadius.all(Radius.circular(20));
 const borderRadiusVT20 = BorderRadius.vertical(top: Radius.circular(20));
+const borderRadiusVT24 = BorderRadius.vertical(top: Radius.circular(20));
+const borderRadiusVB16 = BorderRadius.vertical(bottom: Radius.circular(20));
 const borderRadiusHR10 = BorderRadius.horizontal(right: Radius.circular(10));
 const borderRadius24 = BorderRadius.all(Radius.circular(24));

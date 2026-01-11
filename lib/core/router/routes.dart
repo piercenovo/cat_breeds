@@ -15,4 +15,9 @@ class Routes {
     name: 'cat-breeds',
     path: '/cat-breeds',
   );
+
+  static Routes get catBreedDetail => const Routes._(
+    name: 'cat-breed-detail',
+    path: '/cat-breeds-detail',
+  );
 }

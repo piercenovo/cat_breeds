@@ -3,7 +3,6 @@ import 'dart:developer';
 import 'package:cat_breeds_api/cat_breeds_api.dart';
 import 'package:dio/dio.dart';
 
-/// An interceptor that will try to send failed requests again
 class RetryInterceptor extends Interceptor {
   RetryInterceptor({
     required Dio dio,

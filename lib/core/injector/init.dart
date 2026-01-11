@@ -10,14 +10,13 @@ Future<void> init(Environment environment) async {
   final enableLogging = config.enableLogging;
   final apiKey = config.apiKey;
 
-  final dio = Dio(BaseOptions());
+  // ignore: avoid_redundant_argument_values
+  final dio = Dio(BaseOptions(baseUrl: Environment.baseUrl));
   dio.interceptors.addAll([
     RetryInterceptor(dio: dio, enableLogging: enableLogging),
     AuthInterceptor(apiKey: apiKey),
   ]);
   final http = Http(dio: dio, enableLogging: enableLogging);
 
-  injectDataSources(config: config, http: http);
-  injectRepositories();
-  injectCubits();
+  setupDependencies(http: http, config: config);
 }

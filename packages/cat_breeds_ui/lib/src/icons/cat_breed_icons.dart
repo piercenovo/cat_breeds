@@ -137,4 +137,9 @@ class CatBreedIcons {
     fontFamily: _kFontFam,
     fontPackage: _kFontPkg,
   );
+  static const IconData x = IconData(
+    0xe81a,
+    fontFamily: _kFontFam,
+    fontPackage: _kFontPkg,
+  );
 }

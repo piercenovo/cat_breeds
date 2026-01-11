@@ -10,7 +10,7 @@ class CBAppBar extends StatelessWidget {
     this.button,
     this.onArrowDown,
     this.onBack,
-    this.onMenuTap,
+    this.textAlign = TextAlign.center,
     this.withDivider = true,
   });
 
@@ -20,7 +20,7 @@ class CBAppBar extends StatelessWidget {
   final Widget? button;
   final VoidCallback? onArrowDown;
   final VoidCallback? onBack;
-  final VoidCallback? onMenuTap;
+  final TextAlign textAlign;
   final bool withDivider;
 
   @override
@@ -32,25 +32,16 @@ class CBAppBar extends StatelessWidget {
           padding: edgeInsetsV4.add(edgeInsetsH4),
           child: Row(
             children: [
-              if (onMenuTap != null) ...[
-                CBIconButton(
-                  iconData: CatBreedIcons.menu_left,
-                  onPressed: onMenuTap!,
-                  color: Palette.primary,
-                  fontWeight: AppFontWeight.regular,
-                ),
-                space4,
-              ],
               if (onBack != null) ...[
                 CBIconButton(
                   iconData: CatBreedIcons.chevron_left,
                   onPressed: onBack!,
-                  color: Palette.primary,
+                  color: Palette.brandPrimary,
                   fontWeight: AppFontWeight.regular,
                 ),
                 space4,
               ],
-              if (onBack == null && onMenuTap == null) ...[
+              if (onBack == null) ...[
                 const SizedBox(
                   width: 16,
                   height: 48,
@@ -62,6 +53,7 @@ class CBAppBar extends StatelessWidget {
                   child: ColoredBox(
                     color: Palette.transparent,
                     child: RichText(
+                      textAlign: textAlign,
                       overflow: TextOverflow.ellipsis,
                       text: TextSpan(
                         text: title,

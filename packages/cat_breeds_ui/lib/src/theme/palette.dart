@@ -7,16 +7,9 @@ class Palette {
   // Brand / Logo
   // ---------------------------------------------------------------------------
 
-  /// Primary real de la app
   static const Color brandPrimary = Color(0xFF665687);
-
-  /// Logo púrpura secundario
   static const Color brandSecondary = Color(0xFF89759C);
-
-  /// Oscuro del logo / base dark
   static const Color brandDark = Color(0xFF231F20);
-
-  /// Variantes del primary
   static const Color brandPrimaryLight = Color(0xFF9A8FB0);
   static const Color brandPrimaryDark = Color(0xFF4F436A);
 
@@ -85,14 +78,9 @@ class Palette {
   static const Color hint = neutral500;
   static const Color hintDark = neutral400;
 
-  // ---------------------------------------------------------------------------
-  // Feedback
-  // ---------------------------------------------------------------------------
-
-  static const Color info = Color(0xFF0288D1);
-  static const Color success = Color(0xFF2E7D32);
-  static const Color warning = Color(0xFFFF8F00);
-  static const Color error = Color(0xFFD32F2F);
+  static const Color blue = Color(0xFF0288D1);
+  static const Color green = Color(0xFF2E7D32);
+  static const Color red = Color(0xFFD32F2F);
 
   // ---------------------------------------------------------------------------
   // Utilities
@@ -100,4 +88,15 @@ class Palette {
 
   static const Color divider = neutral200;
   static const Color dividerDark = neutral700;
+
+  // ---------------------------------------------------------------------------
+  // Extras: colores suaves / pastel para UI / Cards
+  // ---------------------------------------------------------------------------
+
+  static const Color pastelBlue = Color(0xFFB3C7E6);
+  static const Color pastelGreen = Color(0xFFA4E6B3);
+  static const Color pastelOrange = Color(0xFFFACBA3);
+  static const Color pastelPink = Color(0xFFF3A3B9);
+  static const Color pastelPurple = Color(0xFFCBA3E6);
+  static const Color pastelYellow = Color(0xFFFFF3B0);
 }

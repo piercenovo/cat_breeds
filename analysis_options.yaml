@@ -30,3 +30,5 @@ analyzer:
     invalid_annotation_target: ignore
     avoid_renaming_method_parameters: ignore
     type_annotate_public_apis: ignore
+    deprecated_member_use: ignore
+    avoid_catches_without_on_clauses: ignore
