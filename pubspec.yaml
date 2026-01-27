@@ -17,7 +17,7 @@ dependencies:
   cat_breeds_ui:
     path: packages/cat_breeds_ui
   custom_refresh_indicator: ^4.0.1
-  dio: ^5.9.0
+  dio: ^5.9.1
   flutter:
     sdk: flutter
   flutter_bloc: ^9.1.1
